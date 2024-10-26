@@ -13,9 +13,9 @@ const Home = () => {
   ];
 
   const promotions = [
-    { title: 'CrossFit', discount: '15%', description: 'CrossFit is a universal way of saving your health and making your body strong.', bg: 'https://s3-alpha-sig.figma.com/img/659a/ec16/ae0f315d9f8f01447ec72291d89076e1?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BD-tn540ggcNAKwWE8--x0aqPi1n3ZswvtD7e~uTqTb4PlhzUPzGEs5BJdqU8hxEIorDnVOdnD59fuL4c-Mru2XN6mCGDpQ~bqmAPd1SjgVB57feXJxWDaULqV1kmZSKlVLtV4-7qyoeP~qDutr4SIc8fZKiNSJVXCSfQcgny8ry6LlzvkLh0Yx7lkq8kwb5c4a9LBavPJS2unf6rULsu2R7q7Ne97qkBRitwXH9oTKp2QqswQMh-n1F807bf9f6H52dKHaPYb7wmIj~EGWrfWyAh4XIylQNuYALqGhT8CmXurelTZAn00ABuT~9WbMzLSWTdzdZC4lJDEI3r4yRpg__' },
-    { title: 'Aerobic', discount: '10%', description: 'Aerobic is the perfect activity for women to stay fit and healthy.', color: 'bg-pink-300', bg: 'https://s3-alpha-sig.figma.com/img/24a3/7134/8e4c18b076fbfb5c4de4ec2b7dca480e?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aY9-b~bu4eReSzJZmdgnNMmyMaUBEJFVtMak49o3Hlbe6X3LlgPTl77JGe1JZyDBnHhFPnopkLWNdyZBA4zUv2YNkGPvLWjM1kLbTdBWW5H9RmLV5j7y6iFN3j8AW8P-U69lfBAHq8VqZVnegFTbU6Vxg03uQJsVc8APDlndOgnpsQatywk0Ib9Ha4fAsBWG85vUzlZibC3WFgQ-1pxTqubzIjnIW5St8K4Nfe9py3~pblIA3uMkKVQo15m-DusSFRT1xscUXmgUyNQzgXMyI2uwcAqCmYKCkp70xCuC7f0xtP6nKBapFaoU435BiGQYhZWZHC5xodMEq8ZbWKaRzg__' },
-    { title: 'Fitness', discount: '25%', description: 'Fitness is necessary for everybody to train your muscles and endurance.', bg: 'https://s3-alpha-sig.figma.com/img/bbf3/8351/07eada89c7837c3747bcb134495f62e0?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G4BKW5xMZHpdpPcipcKYARS5kOFd7CKzfI8wW0HGYXDkqU1lRV95I5k0klX7vfYKfbjeyreup-FEkCuo-wWvs3OGZFkK3Js5oxv~TbeN-0VQZeK4UNEGp6qTkLqmBP2flSTxOTlaJgHD3nd3DgvQe5pOx98Qdr0zeNyI7U~niGV6PiA1Y3v4cP-y7XHhp9pZ-~cbg9sRcW-k9Q20qpJhKIImrOoAvqtRjW17NGGMjEDjEeJdnBQN~eKBY~CGuXR5glBpkgAY7uc4bv66WBOHAM3rgXKHnT1yT~FjLlauAi559hTJ3Pt6l2vHKgFw~5MsJh7Wi4NnXuzUYx8vdCJfgw__' }
+    { title: 'CrossFit', discount: '15%', description: 'CrossFit is a universal way of saving your health and making your body strong.', bg: "bg-[url('/images/c.png')]" },
+    { title: 'Aerobic', discount: '10%', description: 'Aerobic is the perfect activity for women to stay fit and healthy.', color: 'bg-pink-300', bg: "bg-[url('/images/b.png')]" },
+    { title: 'Fitness', discount: '25%', description: 'Fitness is necessary for everybody to train your muscles and endurance.', bg: "bg-[url('/images/a.png')]" }
   ];
 
   const fitnessCenters = [
@@ -193,7 +193,7 @@ const Home = () => {
             {promotions.map((promo, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-lg shadow-md bg-[url('${promo.bg}')] bg-center bg-invert bg-cover bg-no-repeat ${index === 1 ? 'md:row-span-2' : 'md:col-span-2'}`}
+                className={`p-6 rounded-lg shadow-md ${promo.bg} bg-center bg-invert bg-cover bg-no-repeat ${index === 1 ? 'md:row-span-2' : 'md:col-span-2'}`}
               >
                 <div className='flex justify-between text-start gap-4 min-h-60 h-full'>
                   <div className='max-w-sm my-auto'>
